@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import "tailwindcss";
+
+        .input {
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .button {
+            border-radius: 4px;
+            color: white;
+            background-color: blue;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid grid-cols-12 grid-rows-6 gap-2 w-240">
+        <div class="col-span-12 row-span-1">
+            <h1>Exercício com Tailwind</h1>
+        </div>
+        <div class="col-span-3 border-1 border-gray-300 row-span-4 flex gap-3 flex-col p-3">
+            <p>
+                Preencha o formulário ao lado com suas informações
+            </p>
+            <p>
+                Seus dados não serão compartilhados com terceiros
+            </p>
+        </div>
+        <div class="col-span-9 row-span-4 flex flex-col justify-between">
+            <div class="grid grid-cols-6 gap-3">
+                <div class="col-span-3">
+                    <label>Nome</label>
+                    <input type="text" class="input border-1 border-gray-300">
+                </div>
+                <div class="col-span-3">
+                    <label>Sobrenome</label>
+                    <input type="text" class="input border-1 border-gray-300">
+                </div>
+                <div class="col-span-6">
+                    <label>Usuário</label>
+                    <input type="text" class="input border-1 border-gray-300">
+                </div>
+                <div class="col-span-6">
+                    <label>Senha</label>
+                    <input type="text" class="input border-1 border-gray-300">
+                </div>
+            </div>
+            <button class="button">
+                Cadastrar
+            </button>
+        </div>
+    </div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</body>
+</html>
