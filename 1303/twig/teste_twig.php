@@ -4,4 +4,8 @@
 
 require 'carregar_twig.php';
 
-echo 'oi';
+$nome = 'Abacaxi';
+
+echo $twig->render('teste_twig.html', [
+    'nome' => $nome
+]);
