@@ -1,6 +1,21 @@
-
-<h1>
-    Twig funcionando
-</h1>
+<!-- teste_twig.html -->
+<h1>Twig funcionando</h1>
 <hr>
-<p>Olá {{ nome }}!</p>
+<p>Olá <u>{{ nome|upper }}</u>. Twig está funcionando.</p>
+<p>
+    {% if legal %}
+    Você é um cara legal
+    {% else %}
+    Você não é um cara legal
+    {% endif %}
+</p>
+<p>
+    <ul>
+        {% for disc in disciplinas %}
+        <li>{{ disc }}</li>
+        {% endfor %}
+    </ul>
+</p>
+<p>
+    {{ poema|nl2br }}
+</p>
