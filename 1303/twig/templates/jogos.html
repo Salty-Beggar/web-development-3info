@@ -2,8 +2,28 @@
 
 {% block conteudo %}
 
+{% set estilos = {
+    'acao': 'Ação',
+    'tiro': 'Tiro',
+    'rpg': 'RPG'
+} %}
+
 <h3>Lista de jogos</h3>
 
 <a href="jogos_inserir.php">➕ Novo Jogo</a>
+
+<br><br>
+<table border="1" style="border-collapse: collapse">
+    {% for jogo in jogos %}
+    <tr>
+        <td>
+            {{ jogo.nome }}
+        </td>
+        <td>
+            {{ estilos[jogo.estilo] ?? "Não encontrado" }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
 {% endblock %}
